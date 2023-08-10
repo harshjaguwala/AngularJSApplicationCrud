@@ -1,0 +1,32 @@
+<html ng-app="myModule">
+    <head>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+      <script src="/AngularApplication/js/App.js"></script>
+    </head>
+    <title>
+        Form 
+    </title>
+    <body>
+      <center>
+        <div ng-controller="DisplayController">
+            <h2>Display Page</h2>
+            <p>
+              Search Here:<input type="text" ng-model="test"></p>
+            <table border="10">
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Delete</th>
+              </tr>
+              
+              <tr ng-repeat="entry in formEntries |  filter:test">
+                <td>{{ entry[0].name }}</td>
+                <td>{{ entry[0].email }}</td>
+                <td><button type="submit" ng-click="deleteRow(entry)">Delete</button></td>
+              </tr>
+            </table>
+          </div>
+        </center>
+    </body>
+</html>

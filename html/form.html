@@ -1,0 +1,24 @@
+<html ng-app="myModule">
+    <head>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+      <script src="/AngularApplication/js/App.js"></script>
+    </head>
+    <title>
+        Form 
+    </title>
+    <body>
+      <center>
+        <div ng-controller="FormController">
+            <h2>Form Page</h2>
+            <form ng-submit="submitForm()" >
+              <label>Name:</label>
+              <input type="text" ng-model="name" required><br>
+              <label>Email:</label>
+              <input type="text" ng-model="email" required><br>
+              <button type="submit" >Submit</button>
+            </form>
+          </div>
+        </center>
+    </body>
+</html>
